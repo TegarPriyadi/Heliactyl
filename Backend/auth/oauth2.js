@@ -1,3 +1,9 @@
+/**
+ * Todo:
+ * - Adding a bunch of Try Catch statements
+ * - Handling exceptions a bit nicer than currently 
+ * - Getting rid of the guilds.join scrope. 
+ */
 "use strict";
 
 const settings = require("../../settings.json");
