@@ -1,4 +1,5 @@
-# v14-ES/ID
+![header](https://capsule-render.vercel.app/api?type=transparent&height=200&color=gradient&text=Heliactyl-nl-%20&textBg=false&section=header&reversal=false&animation=fadeIn&fontColor=abaef2&desc=V14&descAlign=60&descAlignY=72&descSize=30&fontAlignY=50&fontAlign=50&fontSize=90)
+# v14-ES/ID (Engineering (Concept) Sample / In Development)
 
 > [!WARNING]  
 > This is an in development version of Heliactyl anything could break and probably will break.
@@ -21,7 +22,7 @@
 
 # Warning
 
-We can't require you to keep the "Powered by Heliactyl" footer, but we'd appreciate it if you do. It helps increase visibility for the project. 
+We can't force you to keep the "Powered by Heliactyl" footer, but we'd appreciate it if you do. It helps increase visibility for the project. 
 Please consider keeping it. :)
 
 <hr>
