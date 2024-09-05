@@ -187,6 +187,7 @@ app.use(RateLimiter)
 const router = glob.sync('./Backend/**/*.js');
 for (const file of router) {
   const router = require(file);
+  console.log(`Loading ${file}`); // Added to check for issues while loading. Will be removed later.
   if (typeof router.load === 'function') router.load(app, db);
 }
 
