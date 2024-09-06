@@ -27,7 +27,7 @@
                               placeholder="Enter user ID" id="IDSet">
                           </div>
                           <div class="form-group">
-                            <label for="InputPackage">CPU</label><BR>
+                            <label for="InputPackage">Plan</label><BR>
                             <select class="form-control" style="border-radius: 15px; padding: 8px;" id="package">
                               <% for (let [name, value] of Object.entries(settings.api.client.packages.list)) { %>
                                 <option value="<%= name %>">

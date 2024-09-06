@@ -7,6 +7,7 @@ module.exports = (key, db, ip, res) => {
     return new Promise(async resolve => {
         let ipcache = await db.get(`vpncheckcache-${ip}`)
         if (!ipcache) {
+            // will be replaced with an free and better alternative
             vpncheck = await (await fetch(`https://proxycheck.io/v2/${ip}?key=${key}&vpn=1`)).json().catch(() => { })
         }
         if (ipcache || (vpncheck && vpncheck[ip])) {
@@ -16,7 +17,7 @@ module.exports = (key, db, ip, res) => {
             if (ipcache === "yes") {
                 resolve(true)
                 renderFile(
-                    `./themes/${newsettings.defaulttheme}/alerts/vpn.ejs`,
+                    `./Public/Themes/${newsettings.defaulttheme}/Errors/vpn.ejs`,
                     {
                         settings: newsettings,
                         db,
@@ -24,7 +25,7 @@ module.exports = (key, db, ip, res) => {
                     },
                     null,
                     (err, str) => {
-                        if (err) return renderFile(`./themes/default/alerts/vpn.ejs`);
+                        if (err) return renderFile(`./Public/Themes/Default/Errors/vpn.ejs`);
                     }
                 )
                 return
