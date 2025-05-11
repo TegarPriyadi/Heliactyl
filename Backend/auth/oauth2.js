@@ -269,6 +269,7 @@ module.exports.load = async function (app, db) {
               req.session.newaccount = true;
               req.session.password = genpassword;
             } else {
+		let accountlist;
               try {
                 let accountlistjson = await fetch(
                   settings.pterodactyl.domain + "/api/application/users?include=servers&filter[email]=" + encodeURIComponent(userinfo.email),
@@ -285,7 +286,7 @@ module.exports.load = async function (app, db) {
                   throw new Error(`HTTP error! status: ${accountlistjson.status}`);
                 }
 
-                let accountlist = await accountlistjson.json();
+                accountlist = await accountlistjson.json();
                 console.log(accountlist);
               } catch (error) {
                 console.error('Error fetching account list:', error);
